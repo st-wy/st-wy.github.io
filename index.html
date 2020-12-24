@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Wylovest</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="桑田" />
+	<meta name="description" content="with you ~  " />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="css/ohmygod.css" rel="stylesheet" type="text/css"/>
+
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?e9e0ed8d2dd56059cc040dc1f05b7424";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+	<style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+            background-image: url('bg.jpg');
+            font-size: 85%;
+            margin: 0;
+        }
+        
+        h2 {
+            font-size: 220%;
+            font-weight: 400;
+        }
+        
+        .content {
+            position: absolute;
+            width: 100%;
+            top: 85%;
+            transform: translate(0, -50%);
+            text-align: center;
+        }
+        
+        .timer {
+            font-size: 180%;
+            line-height: 1.5;
+            margin: 1em 0;
+        }
+        
+        .timer b {
+            color: rgb(253, 99, 125);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="content">
+        <h2>桑田，with you ~</h2>
+        <div class="timer">
+            <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
+        </div>
+    </div>
+
+    <script>
+        function timer() {
+            var start = new Date(2020, 11, 17); 
+            var t = new Date() - start;
+
+			var h = t / 1000 / 60 / 60 % 24;
+			h = h - 22;
+			if (h < 0) {
+				h = h + 24 ;
+			}
+
+            var m = t / 1000 / 60 % 60;
+			m = m - 13;
+			if (m < 0) {
+				m = m + 60 ;
+				h = h - 1;
+			}
+
+            var s = t / 1000 % 60;
+
+
+			h = ~~ h;
+            if (h < 10) {
+                h = "0" + h;
+            }
+			m = ~~ m;
+            if (m < 10) {
+                m = "0" + m;
+            }
+			s = ~~ s;
+            if (s < 10) {
+                s = "0" + s;
+            }
+
+            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24 + 30);
+            document.getElementById('h').innerHTML = h;
+            document.getElementById('m').innerHTML = m;
+            document.getElementById('s').innerHTML = s;
+        }
+        timer();
+        setInterval(timer, 1000);
+    </script>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-4 col-md-4">
+				<a href="https://wuyouxx.github.io/" class="thumbnail">
+					<img src="img/1.jpg" alt="...">
+				</a>
+			</div>
+			<div class="col-xs-4 col-md-4">
+				<a href="https://wuyouxx.github.io/" class="thumbnail">
+					<img src="img/2.jpg" alt="...">
+				</a>
+			</div>
+			<div class="col-xs-4 col-md-4">
+				<a href="https://wuyouxx.github.io/" class="thumbnail">
+					<img src="img/3.jpg" alt="...">
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-4 col-md-4">
+				<a href="https://wuyouxx.github.io/" class="thumbnail">
+					<img src="img/4.jpg" alt="...">
+				</a>
+			</div>
+			<div class="col-xs-4 col-md-4">
+				<a href="https://wuyouxx.github.io/" class="thumbnail">
+					<img src="img/5.jpg" alt="...">
+				</a>
+			</div>
+			<div class="col-xs-4 col-md-4">
+				<a href="https://wuyouxx.github.io/" class="thumbnail">
+					<img src="img/6.jpg" alt="...">
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-4 col-md-4">
+				<a href="https://wuyouxx.github.io/" class="thumbnail">
+					<img src="img/7.jpg" alt="...">
+				</a>
+			</div>
+			<div class="col-xs-4 col-md-4">
+				<a href="https://wuyouxx.github.io/" class="thumbnail">
+					<img src="img/8.jpg" alt="...">
+				</a>
+			</div>
+			<div class="col-xs-4 col-md-4">
+				<a href="https://wuyouxx.github.io/" class="thumbnail">
+					<img src="img/9.jpg" alt="...">
+				</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
